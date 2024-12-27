@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    
+   
+  
+    body {
+        font-family: Arial, sans-serif;
+        background-color: #f0f0f0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        margin: 0;
+    }
+
+    .outer-container {
+        border: 2px solid #333;
+        height: 430px;
+        width: 250px;
+        border-radius: 20px;
+        background-color: #fff;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        padding: 10px;
+        background-color: rgba(246, 194, 81, 0.719);
+    }
+
+    .inner-div {
+        width: calc(100% - 20px);
+        height: 40px;
+        margin-bottom: 20px;
+        padding: 5px;
+        font-size: 18px;
+        border-radius: 5px;
+        border: 1px solid #ccc;
+        text-align: right;
+    }
+
+    .button {
+        width: 50px;
+        height: 50px;
+        font-size: 30px;
+        background-color: #f4f4f4;
+        border: 1px solid #ddd;
+        border-radius: 5px;
+        margin: 5px;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+       margin-left: 20px;
+    }
+
+    .button:hover {
+        background-color: #ddd;
+    }
+
+    .button:active {
+        background-color: #ccc;
+    }
+
+    .button:focus {
+        outline: none;
+    }
+
+    .button:nth-last-child(2) {
+        background-color: rgb(193, 99, 5);
+        color: white;
+    }
+
+    .button:nth-last-child(2):hover {
+        background-color: orangered;
+        
+    }
+
+    .button:nth-last-child(2):active {
+        background-color: orangered;
+        
+    }
+</style>
+
+</style>
+<body>
+    <div class="outer-container">
+        <input type="text" class="inner-div">
+         <button class="button" onclick=" currentDisplay = '';document.querySelector('.inner-div').value = currentDisplay;">C</button>
+         <button class="button" onclick=" currentDisplay = currentDisplay + '*';document.querySelector('.inner-div').value = currentDisplay;"> * </button>
+         <button class="button" onclick=" currentDisplay = currentDisplay + '+';document.querySelector('.inner-div').value = currentDisplay;"> + </button>
+         <button class="button" onclick=" currentDisplay = currentDisplay + '-';document.querySelector('.inner-div').value = currentDisplay;">-</button>
+         <button class="button" onclick=" currentDisplay = currentDisplay + '1';document.querySelector('.inner-div').value = currentDisplay;">1</button>
+         <button class="button" onclick=" currentDisplay = currentDisplay + '2';document.querySelector('.inner-div').value = currentDisplay;">2</button>
+         <button class="button" onclick=" currentDisplay = currentDisplay + '3';document.querySelector('.inner-div').value = currentDisplay;">3</button>
+         <button class="button" onclick=" currentDisplay = currentDisplay + '4';document.querySelector('.inner-div').value = currentDisplay;">4</button>
+         <button class="button" onclick=" currentDisplay = currentDisplay + '5';document.querySelector('.inner-div').value = currentDisplay;">5</button>
+         <button class="button" onclick=" currentDisplay = currentDisplay + '6';document.querySelector('.inner-div').value = currentDisplay;">6</button>
+         <button class="button" onclick=" currentDisplay = currentDisplay + '7';document.querySelector('.inner-div').value = currentDisplay;">7</button>
+         <button class="button" onclick=" currentDisplay = currentDisplay + '8';document.querySelector('.inner-div').value = currentDisplay;">8</button>
+         <button class="button" onclick=" currentDisplay = currentDisplay + '9';document.querySelector('.inner-div').value = currentDisplay;">9</button>
+         <button class="button" onclick=" currentDisplay = currentDisplay + '0';document.querySelector('.inner-div').value = currentDisplay;">0</button>
+         <button class="button" onclick=" currentDisplay = currentDisplay + '.';document.querySelector('.inner-div').value = currentDisplay;">.</button>
+         <button class="button" onclick=" 
+         let result = eval(currentDisplay);
+         currentDisplay = result ;document.querySelector('.inner-div').value = currentDisplay;">=</button>
+         <button class="button"onclick=" currentDisplay = currentDisplay + '/';document.querySelector('.inner-div').value = currentDisplay;">/</button>
+    </div>
+    
+    <script>
+        let currentDisplay = '';
+        document.querySelector('.inner-div').value = currentDisplay;
+        </script>
+</body>
+</html>
